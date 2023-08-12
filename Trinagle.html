@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="1000" height="700" />
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      //LEFT LINE
+      ctx.beginPath();
+      ctx.moveTo(28, 5);
+      ctx.lineTo(29, 400);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+      ctx.closePath();
+
+      //LINE MIDDLE
+      ctx.beginPath();
+      ctx.moveTo(400, 290);
+      ctx.lineTo(179, 180);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+      ctx.closePath();
+
+      //Triangle
+      ctx.beginPath();
+      ctx.moveTo(400, 310);
+      ctx.lineTo(200, 210);
+      ctx.lineTo(279, 305);
+      ctx.fillStyle = "red";
+      ctx.fill();
+      ctx.closePath();
+
+      //RIGHT LINE
+      ctx.beginPath();
+      ctx.moveTo(500, 5);
+      ctx.lineTo(499, 400);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+      ctx.closePath();
+    </script>
+  </body>
+</html>
