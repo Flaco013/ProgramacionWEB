@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="500"
+      height="500"
+      style="border: 7px solid grey"
+    />
+    <img src="sharkPICTURE.png" id="imageShark" style="display: none" />
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+      var image = document.getElementById("imageShark");
+
+      ctx.drawImage(image, 10, 110, 100, 100);
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "red";
+      ctx.arc(160, 380, 50, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "blue";
+      ctx.arc(220, 380, 50, 0, 2 * Math.PI);
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.font = "40px Avenir";
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "blue";
+      ctx.fillText("Hello World", 150, 150);
+      ctx.stroke();
+
+      ctx.font = "40px Avenir";
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "yellow";
+      ctx.fillText("Hello World", 150, 250);
+      ctx.stroke();
+      //ctx.fill();
+
+      const grd = ctx.createLinearGradient(0, 0, 170, 0);
+      grd.addColorStop(0, "green");
+      grd.addColorStop(1, "yellow");
+      // grd.addColorStop(170, "blue");
+      //grd.addColorStop(0, "red");
+
+      ctx.fillStyle = grd;
+      ctx.fillRect(40, 10, 200, 100);
+
+      const grd2 = ctx.createRadialGradient(310, 240, 500, 50, 30, 50);
+      grd2.addColorStop(0, "red");
+      grd2.addColorStop(1, "blue");
+
+      ctx.fillStyle = grd2;
+      ctx.fillRect(310, 10, 170, 100);
+    </script>
+  </body>
+</html>
