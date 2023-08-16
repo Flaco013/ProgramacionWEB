@@ -6,19 +6,33 @@
     <title>Document</title>
   </head>
   <body>
-    <canvas
+   <canvas
       id="myCanvas"
-      width="500"
-      height="500"
-      style="border: 7px solid grey"
+      width="600"
+      height="600"
+      style="border: 1px solid rgb(0, 0, 0)"
+    ></canvas>
+    <img
+      id="shark"
+      src="sharkPICTURE.png"
+      alt="The Shark"
+      onload="draw()"
+      style="display: none"
     />
-    <img src="sharkPICTURE.png" id="imageShark" style="display: none" />
+
     <script>
       const canvas = document.getElementById("myCanvas");
       const ctx = canvas.getContext("2d");
-      var image = document.getElementById("imageShark");
+      //const image = document.getElementById("shark");
 
-      ctx.drawImage(image, 10, 110, 100, 100);
+      //ctx.drawImage(image, 100, 110);
+
+      function draw() {
+        const c = document.getElementById("myCanvas");
+        const ctx = c.getContext("2d");
+        const img = document.getElementById("shark");
+        ctx.drawImage(img, 100, 100);
+      }
 
       ctx.beginPath();
       ctx.strokeStyle = "black";
