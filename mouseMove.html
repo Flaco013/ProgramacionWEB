@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="600"
+      height="600"
+      style="border: 1px solid rgb(0, 0, 0)"
+    ></canvas>
+
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+      var fig = true;
+      var color = randomRgbColor();
+      var pressed = false;
+
+      canvas.addEventListener("mouseover", (e) => {
+        console.log("mouseover");
+
+        color = randomRgbColor();
+      });
+
+      canvas.addEventListener("mouseout", (e) => {
+        console.log("mouseout");
+        color = randomRgbColor();
+        fig = fig ? false : true;
+      });
+
+      canvas.addEventListener("mousedown", (e) => {
+        console.log("mousedown");
+        console.log(e);
+
+        if (fig) {
+          ctx.beginPath();
+          ctx.fillStyle = color; //"rgba(13,214,242,0.5)";
+          ctx.arc(e.layerX, e.layerY, 50, 0, 2 * Math.PI);
+          ctx.fill();
+          ctx.stroke();
+        } else {
+          ctx.fillStyle = color;
+          const size = 70;
+          ctx.fillRect(e.layerX - size / 2, e.layerY - size / 2, size, size);
+        }
+        // ctx.closePath();
+      });
+
+      canvas.addEventListener("mousemove", (e) => {
+        console.log("mousemove");
+        console.log(e);
+
+        ctx.fillStyle = "blue";
+
+        ctx.beginPath();
+        ctx.arc(e.layerX - 12, e.layerY - 12, 2, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
+      });
+
+      function randomRgbColor() {
+        let r = randomInteger(255);
+        let g = randomInteger(255);
+        let b = randomInteger(255);
+        return "rgba(" + r + "," + g + "," + b + ",0.5)";
+      }
+
+      function randomInteger(max) {
+        return Math.floor(Math.random() * (max + 1));
+      }
+    </script>
+  </body>
+</html>
