@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="500"
+      height="500"
+      style="border: 1px solid rgb(0, 0, 0)"
+    ></canvas>
+
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+      var fig = true;
+      var color = randomRgbColor();
+      var pressed = false;
+      var x = 225,
+        y = 255;
+
+      document.addEventListener("keydown", (e) => {
+        console.log("e");
+
+        if (e.keyCode == 87) {
+          y -= 10;
+        }
+        if (e.keyCode == 83) {
+          y += 10;
+        }
+        if (e.keyCode == 65) {
+          x -= 10;
+        }
+        if (e.keyCode == 68) {
+          x += 10;
+        }
+
+        update();
+
+        //color = randomRgbColor();
+      });
+
+      function update() {
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, 500, 500);
+        //ctx.strokeRect(x,y,50,50);
+
+        ctx.fillStyle = color;
+        ctx.fillRect(x, y, 50, 50);
+        ctx.strokeRect(x, y, 50, 50);
+      }
+
+      function randomRgbColor() {
+        let r = randomInteger(255);
+        let g = randomInteger(255);
+        let b = randomInteger(255);
+        return "rgba(" + r + "," + g + "," + b + ",0.5)";
+      }
+
+      function randomInteger(max) {
+        return Math.floor(Math.random() * (max + 1));
+      }
+    </script>
+  </body>
+</html>
