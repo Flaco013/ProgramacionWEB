@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <img
+      src="/Users/alexisgasga1/ProgramacionAvanzada/sharkPICTURE.png"
+      id="imageShark"
+      width="200"
+      height="200"
+      style="display: none"
+    />
+    <canvas
+      id="myCanvas"
+      width="500"
+      height="500"
+      style="border: 7px solid grey"
+      <canvas
+    /> -->
+
+    <canvas
+      id="myCanvas"
+      width="600"
+      height="600"
+      style="border: 1px solid rgb(0, 0, 0)"
+    ></canvas>
+    <!-- <img id="shark" src="sharkPICTURE.png" alt="The Shark" //onload="draw()"
+    style="display: none" /> -->
+
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+      //const image = document.getElementById("shark");
+
+      //ctx.drawImage(image, 100, 110);
+
+      //   function draw() {
+      //     const c = document.getElementById("myCanvas");
+      //     const ctx = c.getContext("2d");
+      //     const img = document.getElementById("shark");
+      //     ctx.drawImage(img, 100, 100);
+      //   }
+
+      ctx.font = "40px Avenir";
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "blue";
+      ctx.fillText("It's Alive !!!!", 120, 50);
+      ctx.stroke();
+
+      ctx.font = "40px Avenir";
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "red";
+      ctx.fillText("Alive !!!!!", 150, 100);
+      ctx.stroke();
+      //ctx.fill();
+
+      //hair
+      ctx.fillStyle = "black";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(120, 130, 170, 10);
+      ctx.strokeRect(120, 130, 170, 10);
+      ctx.stroke();
+      ctx.fill();
+
+      //head screw
+      ctx.fillStyle = "brown";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(110, 175, 133, 10);
+      ctx.strokeRect(110, 175, 133, 10);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.fillStyle = "brown";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(100, 170, 12, 20);
+      ctx.strokeRect(100, 170, 12, 20);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.fillStyle = "brown";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(170, 175, 133, 10);
+      ctx.strokeRect(170, 175, 133, 10);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.fillStyle = "brown";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(303, 170, 12, 20);
+      ctx.strokeRect(303, 170, 12, 20);
+      ctx.stroke();
+      ctx.fill();
+
+      //Face
+      ctx.fillStyle = "green";
+      ctx.strokeStyle = "green";
+      ctx.fillRect(130, 140, 150, 250);
+      ctx.strokeRect(130, 140, 150, 250);
+      ctx.stroke();
+      ctx.fill();
+
+      //hair for loop squares
+      hair = 120;
+      for (let i = 0; i < 9; i++) {
+        ctx.fillStyle = "black";
+        ctx.strokeStyle = "black";
+        ctx.fillRect(hair, 139, 10, 10);
+        ctx.strokeRect(hair, 139, 10, 10);
+        ctx.stroke();
+        ctx.fill();
+
+        hair += 20;
+      }
+
+      //forhead cut
+      ctx.fillStyle = "black";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(140, 180, 133, 1);
+      ctx.strokeRect(140, 180, 133, 1);
+      ctx.stroke();
+      ctx.fill();
+
+      //Stiches for loop
+      var x = 140;
+      for (let i = 0; i < 14; i++) {
+        ctx.fillStyle = "black";
+        ctx.strokeStyle = "black";
+        ctx.fillRect(x, 170, 1, 20);
+        ctx.strokeRect(x, 170, 1, 20);
+        ctx.stroke();
+        ctx.fill();
+
+        x += 10;
+      }
+
+      //eyebrowns
+      ctx.fillStyle = "black";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(140, 220, 133, 10);
+      ctx.strokeRect(140, 220, 133, 10);
+      ctx.stroke();
+      ctx.fill();
+
+      //eyes
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "white";
+      ctx.fill();
+      ctx.arc(170, 230, 30, 0, 1 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "white";
+      ctx.arc(240, 230, 30, 0, 1 * Math.PI);
+      ctx.stroke();
+      ctx.fill();
+      ctx.closePath();
+
+      //eye ball
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "red";
+      ctx.arc(160, 240, 7, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "red";
+      ctx.fillStyle = "black";
+      ctx.arc(230, 240, 7, 0, 2 * Math.PI);
+      ctx.stroke();
+      ctx.fill();
+      ctx.closePath();
+
+      //ctx.fillStyle = "blue";
+
+      //nose
+      ctx.beginPath();
+      ctx.moveTo(200, 260);
+      ctx.lineTo(200, 300);
+      ctx.lineTo(170, 300);
+      ctx.strokeStyle = "black";
+      ctx.stroke();
+      ctx.closePath();
+
+      //Mouth
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "black";
+      ctx.fillRect(150, 310, 110, 50);
+      ctx.strokeRect(150, 310, 110, 50);
+      ctx.fill();
+      ctx.stroke();
+
+      //teeth
+
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "yellow";
+      ctx.fillRect(150, 310, 20, 15);
+      ctx.strokeRect(150, 310, 20, 15);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "yellow";
+      ctx.fillRect(190, 310, 20, 20);
+      ctx.strokeRect(190, 310, 20, 20);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "white";
+      ctx.fillRect(220, 310, 20, 10);
+      ctx.strokeRect(220, 310, 20, 10);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "white";
+      ctx.fillRect(220, 350, 20, 10);
+      ctx.strokeRect(220, 350, 20, 10);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "white";
+      ctx.fillRect(200, 350, 20, 10);
+      ctx.strokeRect(200, 350, 20, 10);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "white";
+      ctx.fillRect(170, 342, 20, 17);
+      ctx.strokeRect(170, 342, 20, 17);
+      ctx.stroke();
+      ctx.fill();
+
+      //neck
+
+      ctx.fillStyle = "green";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(140, 390, 132, 20);
+      ctx.strokeRect(140, 390, 132, 20);
+      ctx.stroke();
+      ctx.fill();
+
+      //body
+      ctx.fillStyle = "black";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(50, 410, 330, 150);
+      ctx.strokeRect(50, 410, 330, 150);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.fillStyle = "gray";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(120, 410, 180, 80);
+      ctx.strokeRect(120, 410, 180, 80);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.fillStyle = "black";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(10, 410, 40, 50);
+      ctx.strokeRect(10, 410, 40, 50);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.fillStyle = "green";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(10, 460, 40, 100);
+      ctx.strokeRect(10, 460, 40, 100);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.fillStyle = "black";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(380, 410, 40, 50);
+      ctx.strokeRect(380, 410, 40, 50);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.fillStyle = "green";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(380, 460, 40, 100);
+      ctx.strokeRect(380, 460, 40, 100);
+      ctx.stroke();
+      ctx.fill();
+
+      var button = 510;
+      for (let i = 0; i < 3; i++) {
+        ctx.beginPath();
+        ctx.strokeStyle = "brown";
+        ctx.fillStyle = "brown";
+        ctx.arc(210, button, 7, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+
+        button += 18;
+      }
+    </script>
+  </body>
+</html>
