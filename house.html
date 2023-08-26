@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<canvas
+id="myCanvas"
+width="800"
+height="700"
+style="border: 1px solid rgb(0, 0, 0)"
+></canvas>
+<!-- <img id="shark" src="sharkPICTURE.png" alt="The Shark" //onload="draw()"
+style="display: none" /> -->
+
+<script>
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+ctx.fillStyle = "#D3F4F1";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+
+
+//bottom floor
+ctx.fillStyle = "#1A77AB";
+ctx.strokeStyle = "black";
+ctx.fillRect(130, 440, 550, 150);
+ctx.strokeRect(130, 440, 550, 150);
+ctx.stroke();
+ctx.fill();
+
+//window 1 floor
+ctx.fillStyle = "gray";
+ctx.strokeStyle = "black";
+ctx.fillRect(550, 530, 100, 30);
+ctx.strokeRect(550, 530, 100, 30);
+ctx.stroke();
+ctx.fill();
+
+//garage
+ctx.fillStyle = "gray";
+ctx.strokeStyle = "black";
+ctx.fillRect(150, 540, 120, 50);
+ctx.strokeRect(150, 540, 120, 50);
+ctx.stroke();
+ctx.fill();
+
+
+var garagelines = 540
+
+for (let i = 0; i < 5; i++) {
+ctx.fillStyle = "gray";
+ctx.strokeStyle = "black";
+ctx.fillRect(150, garagelines, 120, 10);
+ctx.strokeRect(150, garagelines, 120, 10);
+ctx.stroke();
+ctx.fill();
+    
+garagelines += 10;
+}
+
+//1 floor door
+ctx.fillStyle = "gray";
+ctx.strokeStyle = "black";
+ctx.fillRect(350, 540, 30, 50);
+ctx.strokeRect(350, 540, 30, 50);
+ctx.stroke();
+ctx.fill();
+
+//tree
+ctx.fillStyle = "brown";
+ctx.strokeStyle = "black";
+ctx.fillRect(50, 440, 10, 150);
+ctx.strokeRect(50, 440, 10, 150);
+ctx.stroke();
+ctx.fill();
+
+ctx.fillStyle = "brown";
+ctx.strokeStyle = "black";
+ctx.fillRect(725, 500, 10, 100);
+ctx.strokeRect(725, 500, 10, 100);
+ctx.stroke();
+ctx.fill();
+
+
+
+//driveway
+
+//grass
+ctx.fillStyle = "green";
+ctx.strokeStyle = "black";
+ctx.fillRect(0, 590, 800, 180);
+ctx.strokeRect(0, 590, 800, 180);
+ctx.stroke();
+ctx.fill();
+
+ctx.fillStyle = "gray";
+ctx.strokeStyle = "black";
+ctx.fillRect(130, 590, 150, 180);
+ctx.strokeRect(130, 590, 150, 180);
+ctx.stroke();
+ctx.fill();
+
+
+
+ctx.fillStyle = "gray";
+ctx.strokeStyle = "black";
+ctx.fillRect(350, 590, 30, 180);
+ctx.strokeRect(350, 590, 30, 180);
+ctx.stroke();
+ctx.fill();
+
+var lines =590
+
+for (let i = 0; i < 7; i++) {
+ctx.fillStyle = "gray";
+ctx.strokeStyle = "black";
+ctx.fillRect(350, lines, 30, 1);
+ctx.strokeRect(350, lines, 30, 1);
+ctx.stroke();
+ctx.fill();
+
+lines += 30
+}
+
+//top floor
+ctx.fillStyle = "#1A77AB";
+ctx.strokeStyle = "black";
+ctx.fillRect(320, 290, 370, 150);
+ctx.strokeRect(320, 290, 370, 150);
+ctx.stroke();
+ctx.fill();
+
+//ctx.fillStyle = "#1A77AB";
+ctx.strokeStyle = "black";
+//ctx.fillRect(320, 290, 370, 150);
+ctx.strokeRect(130, 420, 190, 20);
+ctx.stroke();
+//ctx.fill();
+
+//2 floor door
+ctx.fillStyle = "gray";
+ctx.strokeStyle = "black";
+ctx.fillRect(350, 390, 30, 50);
+ctx.strokeRect(350, 390, 30, 50);
+ctx.stroke();
+ctx.fill();
+
+//window 2 floor
+ctx.fillStyle = "gray";
+ctx.strokeStyle = "black";
+ctx.fillRect(550, 350, 80, 50);
+ctx.strokeRect(550, 350, 80, 50);
+ctx.stroke();
+ctx.fill();
+
+ctx.fillStyle = "gray";
+ctx.strokeStyle = "black";
+ctx.fillRect(630, 350, 30, 50);
+ctx.strokeRect(630, 350, 30, 50);
+ctx.stroke();
+ctx.fill();
+
+ctx.beginPath();
+ctx.strokeStyle = "yellow";
+ctx.fillStyle = "yellow";
+ctx.arc(55, 30, 50, 0, 2 * Math.PI);
+ctx.fill();
+ctx.stroke();
+ctx.closePath();
+
+
+ctx.beginPath();
+ctx.strokeStyle = "green";
+ctx.fillStyle = "green";
+ctx.arc(55, 430, 50, 0, 2 * Math.PI);
+ctx.fill();
+ctx.stroke();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.strokeStyle = "green";
+ctx.fillStyle = "green";
+ctx.arc(90, 560, 30, 0, 2 * Math.PI);
+ctx.fill();
+ctx.stroke();
+ctx.closePath();
+
+ctx.beginPath();
+ctx.strokeStyle = "green";
+ctx.fillStyle = "green";
+ctx.arc(730, 500, 30, 0, 2 * Math.PI);
+ctx.fill();
+ctx.stroke();
+ctx.closePath();
+
+
+ctx.beginPath();
+ctx.strokeStyle = "black";
+ctx.fillStyle = "black";
+ctx.arc(359, 564, 2, 0, 2 * Math.PI);
+ctx.fill();
+ctx.stroke();
+ctx.closePath();
+
+
+ctx.beginPath();
+ctx.strokeStyle = "black";
+ctx.fillStyle = "black";
+ctx.arc(359, 420, 2, 0, 2 * Math.PI);
+ctx.fill();
+ctx.stroke();
+ctx.closePath();
+
+
+</script>
+</body>
+</html>
