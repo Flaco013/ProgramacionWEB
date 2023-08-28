@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    canvas {
+      border: 1px solid black;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  </style>
+  <body>
+    <canvas id="myCanvas" width="700" height="600"></canvas>
+
+    <script>
+      //1290x720
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      ctx.fillStyle = "#B5EEFD";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      //BOTTOM
+      ctx.fillStyle = "brown";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(0, 540, 800, 150);
+      ctx.strokeRect(0, 540, 800, 150);
+      ctx.stroke();
+      ctx.fill();
+
+      var line1 = 544;
+
+      for (let i = 0; i < 5; i++) {
+        ctx.fillStyle = "black";
+        ctx.strokeStyle = "black";
+        ctx.fillRect(0, line1, 800, 2);
+        ctx.strokeRect(0, line1, 800, 2);
+        ctx.stroke();
+        ctx.fill();
+
+        line1 += 15;
+      }
+
+      var line2 = 0;
+
+      for (let i = 0; i < 26; i++) {
+        ctx.fillStyle = "black";
+        ctx.strokeStyle = "black";
+        ctx.fillRect(line2, 540, 2, 150);
+        ctx.strokeRect(line2, 540, 2, 150);
+        ctx.stroke();
+        ctx.fill();
+
+        line2 += 27;
+      }
+
+      //BLUE SQUARE
+
+      ctx.fillStyle = "black";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(198, 348, 120, 190);
+      ctx.strokeRect(198, 348, 120, 190);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.fillStyle = "#74C3FF";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(200, 350, 120, 190);
+      ctx.strokeRect(200, 350, 120, 190);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.fillStyle = "black";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(148, 418, 120, 120);
+      ctx.strokeRect(148, 418, 120, 120);
+      ctx.stroke();
+      ctx.fill();
+
+      //PINK SQUARE
+      ctx.fillStyle = "#FDC3B9";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(150, 420, 120, 120);
+      ctx.strokeRect(150, 420, 120, 120);
+      ctx.stroke();
+      ctx.fill();
+
+      //SHADOW OF PINK
+      ctx.fillStyle = "BLACK";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(270, 440, 20, 100);
+      ctx.strokeRect(270, 440, 20, 100);
+      ctx.stroke();
+      ctx.fill();
+
+      //SHADOW OF blue
+      ctx.fillStyle = "black";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(320, 360, 20, 180);
+      ctx.strokeRect(320, 360, 20, 180);
+      ctx.stroke();
+      ctx.fill();
+
+      //GREEN PIPE
+      ctx.fillStyle = "#267E25";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(400, 450, 80, 90);
+      ctx.strokeRect(400, 450, 80, 90);
+      ctx.stroke();
+      ctx.fill();
+
+      //GREEN PIPE TOP
+      ctx.fillStyle = "#267E25";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(390, 420, 100, 30);
+      ctx.strokeRect(390, 420, 100, 30);
+      ctx.stroke();
+      ctx.fill();
+
+      //GREEN SQUARE
+      ctx.fillStyle = "black";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(577, 418, 122, 120);
+      ctx.strokeRect(577, 418, 122, 120);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.fillStyle = "#00DB61";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(580, 420, 120, 120);
+      ctx.strokeRect(580, 420, 120, 120);
+      ctx.stroke();
+      ctx.fill();
+
+      //SMALL SQUARE
+
+      ctx.fillStyle = "black";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(598, 238, 54, 53);
+      ctx.strokeRect(598, 238, 54, 53);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.fillStyle = "#FB9262";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(600, 240, 50, 50);
+      ctx.strokeRect(600, 240, 50, 50);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.fillStyle = "black";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(95, 150, 105, 55);
+      ctx.strokeRect(95, 150, 105, 55);
+      ctx.stroke();
+      ctx.fill();
+
+      //SMALL SQUARE
+      ctx.fillStyle = "#FB9262";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(98, 150, 50, 50);
+      ctx.strokeRect(98, 150, 50, 50);
+      ctx.stroke();
+      ctx.fill();
+
+      //SMALL SQUARE
+      ctx.fillStyle = "#FB9262";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(150, 150, 50, 50);
+      ctx.strokeRect(150, 150, 50, 50);
+      ctx.stroke();
+      ctx.fill();
+
+      //SMALL SQUARE
+
+      ctx.fillStyle = "black";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(47, 330, 52, 53);
+      ctx.strokeRect(47, 330, 52, 53);
+      ctx.stroke();
+      ctx.fill();
+
+      ctx.fillStyle = "#FB9262";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(50, 330, 50, 50);
+      ctx.strokeRect(50, 330, 50, 50);
+      ctx.stroke();
+      ctx.fill();
+
+      //LEAF ATTACK BODY
+      ctx.fillStyle = "GREEN";
+      ctx.strokeStyle = "black";
+      ctx.fillRect(436, 370, 10, 50);
+      ctx.strokeRect(435, 370, 10, 50);
+      ctx.stroke();
+      ctx.fill();
+
+      // const grd2 = ctx.createRadialGradient(70, 20, 20, 50, 333, 22);
+      // grd2.addColorStop(0, "white");
+      // grd2.addColorStop(1, "green");
+
+      // ctx.fillStyle = grd2;
+      // ctx.fillRect(390, 420, 100, 30);
+
+      // const grd3 = ctx.createRadialGradient(270, 250, 250, 250, 270, 230);
+      // grd2.addColorStop(0, "white");
+      // grd2.addColorStop(1, "blue");
+
+      // ctx.fillStyle = grd3;
+      // ctx.fillRect(400, 450, 80, 90);
+
+      //ALL OF THE CIRCLES
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(160, 430, 5, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(160, 530, 5, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(260, 430, 5, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(260, 530, 5, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(210, 360, 5, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(310, 360, 5, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(190, 160, 1, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(190, 190, 1, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(160, 160, 1, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(160, 190, 1, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(140, 160, 1, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(140, 190, 1, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(110, 160, 1, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(110, 190, 1, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(110, 190, 1, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      // GREEN SQUARE CIRCLES
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(590, 430, 5, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(590, 530, 5, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(60, 340, 1, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(90, 340, 1, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(60, 370, 1, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(90, 370, 1, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(610, 280, 1, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(640, 280, 1, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(610, 250, 1, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "GRAY";
+      ctx.arc(640, 250, 1, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+
+      //leaf attack HEAD
+      ctx.beginPath();
+      ctx.strokeStyle = "black";
+      ctx.fillStyle = "red";
+      ctx.arc(435, 370, 15, 35, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+    </script>
+  </body>
+</html>
