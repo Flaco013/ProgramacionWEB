@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Forms</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: rgb(78, 139, 174);
+      }
+    </style>
+    <div id="app">
+      <form>
+        <fieldset>
+          <legend>Name(s):</legend>
+          <input type="text" v-model="name" placeholder="write here" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Last Name(s):</legend>
+          <input type="text" v-model="lastname" placeholder="write here" />
+        </fieldset>
+        <button type="button" v-on:click="savePerson">Save data</button>
+      </form>
+
+      <ol>
+        <li v-for="p in people">{{ p.name }} {{ p.lastName }}</li>
+      </ol>
+
+      <hr />
+
+      <button @click="count++">Click Me {{ count }}</button>
+
+      <h1>Hello {{ username }}</h1>
+
+      <input type="text" v-model="username" />
+
+      <br />
+
+      <input type="" v-model="num1" />
+      <input type="" v-model="num2" />
+
+      <button @click="sumar">Add</button>
+
+      <h1 v-if="result!=0">Result {{ resultado }}</h1>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="text/javascript">
+      const { createApp, ref } = Vue;
+
+      createApp({
+        data() {
+          return {
+            count: ref(0),
+            username: ref(""),
+            num1: ref(0),
+            num2: ref(0),
+            resultado: ref(0),
+            name: ref(""),
+            lastname: ref(""),
+            people: ref([]),
+          };
+        },
+        methods: {
+          sumar() {
+            this.resultado = +this.num1 + this.num2;
+          },
+          savePerson() {
+            console.log("Hola");
+            let person = {
+              name: this.name,
+              lastName: this.lastname,
+            };
+            this.people.push(person);
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
