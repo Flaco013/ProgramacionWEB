@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Alexis",
+    "lastname": "Gasga",
+    "email": "alexis@uabcs.com",
+    "password": "1234567"
+  },
+  {
+    "name": "diana",
+    "lastname": "gasga",
+    "email": "diana@uabcs.com",
+    "password": "1234567"
+  },
+
+  {
+    "name": "liz",
+    "lastname": "gasga",
+    "email": "liz@uabcs.com",
+    "password": "1234567"
+  },
+
+  {
+    "name": "monse",
+    "lastname": "gasga",
+    "email": "monse@uabcs.com",
+    "password": "1234567"
+  }
+]
