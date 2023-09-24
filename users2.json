@@ -1,0 +1,151 @@
+[
+  {
+    "fullname": "Amelia Taylor",
+    "username": "ameliataylor",
+    "phone": "+1-555-777-9999",
+    "email": "amelia.t@example.com",
+    "CompanyName": "Smart Systems Ltd."
+  },
+
+  {
+    "fullname": "Jane Smith",
+    "username": "janesmith456",
+    "phone": "+1-987-654-3210",
+    "email": "jane.smith@example.com",
+    "CompanyName": "XYZ Corporation"
+  },
+  {
+    "fullname": "David Johnson",
+    "username": "davidj89",
+    "phone": "+1-555-123-4567",
+    "email": "david.j@example.com",
+    "CompanyName": "Tech Innovators"
+  },
+  {
+    "fullname": "Emily Brown",
+    "username": "emilyb77",
+    "phone": "+1-888-555-7890",
+    "email": "emily.b@example.com",
+    "CompanyName": "Global Solutions"
+  },
+  {
+    "fullname": "Michael Wilson",
+    "username": "mwilson22",
+    "phone": "+1-777-999-1234",
+    "email": "michael.w@example.com",
+    "CompanyName": "Data Wizards Inc."
+  },
+  {
+    "fullname": "Sarah Lee",
+    "username": "sarahlee555",
+    "phone": "+1-333-777-4567",
+    "email": "sarah.lee@example.com",
+    "CompanyName": "InnovateTech"
+  },
+  {
+    "fullname": "Robert Taylor",
+    "username": "rtaylor123",
+    "phone": "+1-222-333-7890",
+    "email": "robert.t@example.com",
+    "CompanyName": "Dynamic Solutions"
+  },
+  {
+    "fullname": "Lisa Davis",
+    "username": "lisad99",
+    "phone": "+1-444-555-1234",
+    "email": "lisa.d@example.com",
+    "CompanyName": "EcoTech Industries"
+  },
+  {
+    "fullname": "William Clark",
+    "username": "willc23",
+    "phone": "+1-666-777-9876",
+    "email": "william.c@example.com",
+    "CompanyName": "Infinite Innovations"
+  },
+  {
+    "fullname": "Olivia Garcia",
+    "username": "oliviagarcia7",
+    "phone": "+1-111-222-3333",
+    "email": "olivia.g@example.com",
+    "CompanyName": "Tech Titans Ltd."
+  },
+  {
+    "fullname": "James Anderson",
+    "username": "jamesa456",
+    "phone": "+1-999-888-7777",
+    "email": "james.a@example.com",
+    "CompanyName": "BlueSky Technologies"
+  },
+  {
+    "fullname": "Ava Hernandez",
+    "username": "avahernandez22",
+    "phone": "+1-777-666-5555",
+    "email": "ava.h@example.com",
+    "CompanyName": "Digital Innovators Inc."
+  },
+  {
+    "fullname": "Daniel Miller",
+    "username": "dmill34",
+    "phone": "+1-555-444-3333",
+    "email": "daniel.m@example.com",
+    "CompanyName": "GreenTech Solutions"
+  },
+  {
+    "fullname": "Sophia Martinez",
+    "username": "sophiamtz",
+    "phone": "+1-888-999-1111",
+    "email": "sophia.m@example.com",
+    "CompanyName": "FutureTech Corp."
+  },
+  {
+    "fullname": "Liam Brown",
+    "username": "liambrown88",
+    "phone": "+1-666-555-4444",
+    "email": "liam.b@example.com",
+    "CompanyName": "Innovative Systems"
+  },
+  {
+    "fullname": "John Doe",
+    "username": "johndoe123",
+    "phone": "+1-123-456-7890",
+    "email": "john.doe@example.com",
+    "CompanyName": "ABC Inc."
+  },
+  {
+    "fullname": "Ella Wilson",
+    "username": "ellawilson77",
+    "phone": "+1-777-444-9999",
+    "email": "ella.w@example.com",
+    "CompanyName": "TechGenius Inc."
+  },
+  {
+    "fullname": "Jackson Johnson",
+    "username": "jjohnson123",
+    "phone": "+1-999-555-1111",
+    "email": "jackson.j@example.com",
+    "CompanyName": "Visionary Tech Solutions"
+  },
+
+  {
+    "fullname": "Logan Davis",
+    "username": "logandavis33",
+    "phone": "+1-777-444-1111",
+    "email": "logan.d@example.com",
+    "CompanyName": "Tech Innovations Group"
+  },
+  {
+    "fullname": "Mia Clark",
+    "username": "miaclark45",
+    "phone": "+1-444-777-1111",
+    "email": "mia.c@example.com",
+    "CompanyName": "InnoTech Solutions"
+  },
+  {
+    "fullname": "Benjamin Garcia",
+    "username": "bengarcia99",
+    "phone": "+1-222-888-9999",
+    "email": "benjamin.g@example.com",
+    "CompanyName": "Tech Pioneers Inc."
+  }
+]
