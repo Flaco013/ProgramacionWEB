@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Homework 14</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(122, 163, 232);
+    }
+    .formStyle {
+      border: 1px solid #1d51e0;
+      border-collapse: collapse;
+      padding: 5px;
+    }
+    .formStyle th {
+      border: 1px solid #1d51e0;
+      padding: 5px;
+      background: #1d51e0;
+    }
+    .formStyle td {
+      border: 1px solid #1d51e0;
+      padding: 5px;
+    }
+  </style>
+  <body>
+    <div id="app">
+      <form action="" v-if="!access">
+        <fieldset>
+          <legend>email</legend>
+          <input type="email" v-model="email" placeholder="write here" />
+        </fieldset>
+
+        <fieldset>
+          <legend>password</legend>
+          <input type="password" v-model="password" placeholder="write here" />
+        </fieldset>
+        <button @click="login" type="button">Access</button>
+      </form>
+      <div v-if="access">
+        <table class="formStyle">
+          <caption>
+            Users
+          </caption>
+          <thead>
+            <tr>
+              <th>fullname</th>
+              <th>username</th>
+              <th>Cell Phone</th>
+              <th>Email Address</th>
+              <th>Company Name</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tr v-for="u in users">
+            <td>{{u.fullname}}</td>
+            <td>{{u.username}}</td>
+            <td>{{u.phone}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.CompanyName}}</td>
+
+            <td>
+              <button @click="edit(u)">Edit</button>
+              <button type="button" @click="delete_item(u.id)">Delete</button>
+            </td>
+          </tr>
+        </table>
+        <button @click="action='new'">add new record</button>
+        <form style="margin-top: 15px" v-if="action=='new'">
+          <fieldset>
+            <legend>Full Name:</legend>
+            <input v-model="new_record.fullname" type="" name="" />
+          </fieldset>
+          <fieldset>
+            <legend>username:</legend>
+            <input v-model="new_record.username" type="" name="" />
+          </fieldset>
+          <fieldset>
+            <legend>Cell phone:</legend>
+            <input v-model="new_record.phone" type="" name="" />
+          </fieldset>
+          <fieldset>
+            <legend>Email Address:</legend>
+            <input v-model="new_record.email" type="" name="" />
+          </fieldset>
+          <fieldset>
+            <legend>Company Name:</legend>
+            <input v-model="new_record.CompanyName" type="" name="" />
+          </fieldset>
+          <button type="button" @click="save()">Save record</button>
+        </form>
+        <form style="margin-top: 15px" v-if="action=='update'">
+          <fieldset>
+            <legend>FullName:</legend>
+            <input v-model="new_record.fullname" type="" name="" />
+          </fieldset>
+          <fieldset>
+            <legend>username:</legend>
+            <input v-model="new_record.username" type="" name="" />
+          </fieldset>
+          <fieldset>
+            <legend>Cell phone:</legend>
+            <input v-model="new_record.phone" type="" name="" />
+          </fieldset>
+          <fieldset>
+            <legend>Email Address:</legend>
+            <input v-model="new_record.email" type="" name="" />
+          </fieldset>
+          <fieldset>
+            <legend>Company Name:</legend>
+            <input v-model="new_record.CompanyName" type="" name="" />
+          </fieldset>
+          <button type="button" @click="save()">Update record</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="text/javascript">
+      const { createApp, ref } = Vue;
+
+      createApp({
+        data() {
+          const users = ref([]);
+          const access = ref(localStorage.getItem("is_login") === "true");
+          const email = ref("");
+          const password = ref("");
+          const new_record = ref([]);
+          const action = ref("");
+
+          return {
+            email,
+            password,
+            access,
+            users,
+            new_record,
+            action,
+          };
+        },
+        async mounted() {
+          const update = async () => {
+            const response = await fetch("users2.json");
+            this.users = await response.json();
+          };
+          update();
+        },
+        methods: {
+          async login() {
+            const response = await fetch("users.json");
+            const users = await response.json();
+
+            users.forEach((user) => {
+              if (
+                this.email === user.email &&
+                this.password === user.password
+              ) {
+                alert("Welcome " + user.name);
+                localStorage.setItem("user_data", JSON.stringify(user));
+                this.access = true;
+                localStorage.setItem("is_login", true);
+              }
+            });
+
+            if (!this.access) {
+              alert("Login not successful, Please try again");
+            }
+          },
+          save() {
+            if (this.action === "new") {
+              const d = new Date();
+              this.new_record.id = d.getMilliseconds();
+              this.users.push(this.new_record);
+              this.new_record = [];
+              this.action = "";
+              alert("Saved Succesfully");
+            }
+            if (this.action === "update") {
+              this.users.forEach((user) => {
+                if (user.id === this.new_record.id) {
+                  user.name = this.new_record.fullname;
+                  user.phone = this.new_record.phone;
+                  user.email = this.new_record.email;
+                  user.companyName = this.new_record.companyName;
+                  user.id = this.new_record.id;
+                }
+              });
+              this.action = "";
+              alert("Saved succesfully ");
+            }
+          },
+          delete_item(id) {
+            let target = 0;
+            this.users.forEach((user, i) => {
+              if (user.id === id) {
+                target = i;
+              }
+              this.users.splice(target, 1);
+            });
+          },
+          edit(user) {
+            this.new_record.name = user.name;
+            this.new_record.phone = user.phone;
+            this.new_record.email = user.email;
+            this.new_record.companyName = user.companyName;
+            this.new_record.id = user.id;
+            this.action = "update";
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
